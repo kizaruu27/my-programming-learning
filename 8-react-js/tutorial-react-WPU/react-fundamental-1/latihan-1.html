@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan React</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        button {
+            margin: 15px;
+        }
+
+        #reset-btn {
+            margin-left: 27px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const container = document.querySelector('#root');
+        const root = ReactDOM.createRoot(container);
+
+        setTimeout(() => {
+            document.querySelector('.reset-btn').disabled = true;
+        }, 1);
+
+        function CounterSection() {
+            const [value, setValue] = React.useState(0);
+            const buttons = document.querySelectorAll('.btn');
+
+            // Button Function
+            function disableButton() {
+                for (let btn of buttons) {
+                    btn.disabled = true;
+                }                
+            }
+
+            function enableButton() {
+                for (let btn of buttons) {
+                    btn.disabled = false;
+                }
+            }
+
+            // Value Function
+            const increaseValue = () => { 
+                setValue(value + 1);
+            };
+
+            const decreaseValue = () => { 
+                setValue(value - 1);
+            };
+
+            function resetValue() {
+                setValue(0);
+                enableButton();
+                document.querySelector('.reset-btn').disabled = true;
+            }
+
+            function valueCheck() {
+                disableButton();
+                document.querySelector('.reset-btn').disabled = false;
+                return 'Done!';
+            }
+
+            return (
+                <>
+                    <button onClick={decreaseValue} className="btn" id="btn-decrease">-</button>
+                    {value >= 10 || value < 0 ? valueCheck() : value}
+                    <button onClick={increaseValue} className="btn">+</button>
+                    <br />
+                    <button onClick={resetValue} className="reset-btn" >Reset!</button>
+                </>
+            )
+        }
+
+        function Page() {
+            return (
+                <>
+                    <CounterSection />
+                </>
+            )
+        }
+
+        root.render (
+            <>
+                <Page />
+            </>
+        );
+        
+    </script>
+</body>
+</html>

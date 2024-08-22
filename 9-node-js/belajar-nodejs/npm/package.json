@@ -1,0 +1,20 @@
+{
+  "name": "node-npm-tutorial",
+  "version": "1.0.0",
+  "description": "Ini adalah project belajar NPM pada NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon .",
+    "dev": "echo Aplikasi Sedang Berjalan"
+  },
+  "author": "Ucup Surucup Gamteng",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
