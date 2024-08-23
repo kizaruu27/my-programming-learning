@@ -3,9 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>AJAX and API</title>
     </head>
     <body>
-        <script src="fetchRequest.js"></script>
+        <h1>TV Show Finder</h1>
+        <form action="" id="search-form">
+            <label for="query">Insert your movie name:</label>
+            <input type="text" name="query" />
+            <button>Find</button>
+        </form>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="axiosTvMaze.js"></script>
     </body>
 </html>

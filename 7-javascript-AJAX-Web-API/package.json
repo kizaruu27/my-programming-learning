@@ -1,0 +1,15 @@
+{
+    "dependencies": {
+        "axios": "^1.7.4",
+        "crypto-js": "^4.2.0"
+    },
+    "name": "7-javascript-ajax-web-api",
+    "version": "1.0.0",
+    "main": "marvelAPI/marvelAxios.mjs",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
