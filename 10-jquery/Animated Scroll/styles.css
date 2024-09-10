@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectSection-btn {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section-container {
+    background-color: black;
+    font-size: 100px;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    height: 900px;
+}
