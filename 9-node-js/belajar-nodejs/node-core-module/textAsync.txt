@@ -1,1 +1,0 @@
-Ini adalah penulisan string ke direktori secara asynchronus
