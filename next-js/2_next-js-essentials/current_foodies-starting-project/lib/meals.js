@@ -6,3 +6,8 @@ export const getMeals = async () => {
   // throw new Error("Loading meals failed!");
   return db.prepare("SELECT * FROM meals").all();
 };
+
+export const getMeal = (slug) => {
+  // Pakai "?" saat menuliskan query agar tidak terkena sql injection
+  return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug);
+};
