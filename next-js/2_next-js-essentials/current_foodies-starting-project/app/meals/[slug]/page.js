@@ -3,6 +3,18 @@ import style from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
+// function generateMetadata digunakan untuk setup metadata secara dinamis
+// next js akan otomatis mengeksekusi function ini jika dideklarasikan
+export async function generateMetadata({ params }) {
+  const meal = getMeal(params.slug);
+
+  if (!meal) notFound();
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
 export default function MealsSlugPage({ params }) {
   const meal = getMeal(params.slug);
 
