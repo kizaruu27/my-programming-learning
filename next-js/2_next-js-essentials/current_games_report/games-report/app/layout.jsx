@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/navbar";
 import "./globals.css";
 import { geistMono, geistSans } from "@/lib/fonts/font";
+import Footer from "@/components/footer/footer";
 
 export const metadata = {
   title: "Games Report | The Best Place for Stay Up to Date for Gaming Information",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <div className="p-5 mt-28">
           <div className="w-[85%] mx-auto">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );
