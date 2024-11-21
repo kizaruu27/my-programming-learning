@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/icon.jpg/route": "app/icon.jpg/route.js",
+  "/news/page": "app/news/page.js",
+  "/archive/@archive/[year]/page": "app/archive/@archive/[year]/page.js",
+  "/archive/@archive/page": "app/archive/@archive/page.js"
+}
