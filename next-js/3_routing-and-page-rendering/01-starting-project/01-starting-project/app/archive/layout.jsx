@@ -1,5 +1,5 @@
 export default function ArchiveLayout({ archive, latest }) {
-  // paralel routes adalah sebuah metode yg dapat memungkinkan dapat merender lebih dari 1 routes dalam 1 page
+  // paralel routes adalah sebuah metode yg dapat memungkinkan untuk merender lebih dari 1 routes dalam 1 page
   // simbol @ pada struktur folder manandakan bahwa sebuah halaman dapat dirender secara paralel
   // nama paralel page dijadikan sebagai props pada layout yg dapat dipanggil seperti memanggil props biasa
 
