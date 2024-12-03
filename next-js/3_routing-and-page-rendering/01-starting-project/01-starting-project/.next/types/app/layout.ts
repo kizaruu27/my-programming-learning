@@ -1,4 +1,4 @@
-// File: E:\__PROJECTS\My Web Developement Roadmap\next-js\3_routing-and-page-rendering\01-starting-project\01-starting-project\app\layout.jsx
+// File: /Users/dionovanramadhani/Projects/Programming Learning/my-programming-learning/next-js/3_routing-and-page-rendering/01-starting-project/01-starting-project/app/layout.jsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

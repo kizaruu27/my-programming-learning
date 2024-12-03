@@ -1,4 +1,4 @@
-// File: E:\__PROJECTS\My Web Developement Roadmap\next-js\3_routing-and-page-rendering\01-starting-project\01-starting-project\app\archive\@archive\[[...filter]]\page.jsx
+// File: /Users/dionovanramadhani/Projects/Programming Learning/my-programming-learning/next-js/3_routing-and-page-rendering/01-starting-project/01-starting-project/app/archive/@archive/[[...filter]]/page.jsx
 import * as entry from '../../../../../../app/archive/@archive/[[...filter]]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
