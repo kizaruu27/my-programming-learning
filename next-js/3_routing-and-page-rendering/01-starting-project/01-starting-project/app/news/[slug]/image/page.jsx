@@ -8,7 +8,7 @@ export default function ImagePage({ params }) {
   const { slug } = params;
 
   const newsItem = DUMMY_NEWS.find((news) => news.slug === slug);
-  if (!newsItem) notFound();
+  // if (!newsItem) notFound();
 
   return (
     <div className="fullscreen-image">

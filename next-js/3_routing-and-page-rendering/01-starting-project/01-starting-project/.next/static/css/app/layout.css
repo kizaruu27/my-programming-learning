@@ -1,14 +1,14 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 body {
@@ -37,7 +37,7 @@ ul {
 }
 
 #logo {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   border-radius: 4px;
 }
@@ -142,9 +142,16 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.fullscreen-image {
+  width: 100%;
+}
+
+.fullscreen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .news-article img {
@@ -159,8 +166,6 @@ ul {
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 10px 0 #181817;
-  max-width: 50rem;
-  width: 100%;
 }
 
 .modal h2,
@@ -197,3 +202,4 @@ ul {
   text-align: center;
   margin-top: 3rem;
 }
+
