@@ -1,60 +1,31 @@
 {
   "pages": {
-    "/news/[slug]/page": [
+    "/(marketing)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/news/[slug]/page.js"
+      "static/chunks/app/(marketing)/page.js"
     ],
-    "/news/[slug]/not-found": [
+    "/(marketing)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/news/[slug]/not-found.js"
+      "static/css/app/(marketing)/layout.css",
+      "static/chunks/app/(marketing)/layout.js"
     ],
-    "/layout": [
+    "/(content)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/css/app/(content)/layout.css",
+      "static/chunks/app/(content)/layout.js"
     ],
-    "/not-found": [
+    "/(content)/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(content)/not-found.js"
     ],
-    "/news/[slug]/layout": [
+    "/(content)/news/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/news/[slug]/layout.js"
-    ],
-    "/news/[slug]/image/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/news/[slug]/image/page.js"
-    ],
-    "/archive/@archive/[[...filter]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/archive/@archive/[[...filter]]/page.js"
-    ],
-    "/archive/@archive/[[...filter]]/error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/archive/@archive/[[...filter]]/error.js"
-    ],
-    "/archive/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/archive/layout.js"
-    ],
-    "/archive/@latest/default": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/archive/@latest/default.js"
-    ],
-    "/news/[slug]/(.)image/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/news/[slug]/(.)image/page.js"
+      "static/chunks/app/(content)/news/page.js"
     ]
   }
 }
