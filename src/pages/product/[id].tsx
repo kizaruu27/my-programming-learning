@@ -8,7 +8,7 @@ export default function ProductDetailPage() {
   return (
     <div>
       <h1>Product Page</h1>
-      {/* Nama params diambil dari nama filenya */}
+      {/* Nama params diambil dari nama file/folder */}
       <p>Detail Product: {query.id}</p>
     </div>
   );
