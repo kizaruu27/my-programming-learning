@@ -1,7 +1,9 @@
+import style from "./navbar.module.css";
+
 export default function Navbar() {
   return (
-    <div className="navbar">
-      <div>Navbar</div>
+    <div className={style.navbar}>
+      <div className="big">Navbar</div>
     </div>
   );
 }

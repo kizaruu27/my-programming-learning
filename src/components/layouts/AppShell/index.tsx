@@ -1,17 +1,24 @@
+import { usePathname } from "next/navigation";
 import Navbar from "../Navbar";
+import { useRouter } from "next/router";
 
 type AppShellProps = {
   children: React.ReactNode;
 };
 
+const disableNavbar = ["/auth/login", "/auth/register"];
+
 // Component ini bertindak sebagai wrapper/layout dari semua halaman
 export default function AppShell(props: AppShellProps) {
   const { children } = props;
 
+  // Untuk mengecek pathname
+  const { pathname } = useRouter();
+
   return (
     <>
       <main>
-        <Navbar />
+        {!disableNavbar.includes(pathname) && <Navbar />}
         {children}
       </main>
     </>
