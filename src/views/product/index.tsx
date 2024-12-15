@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./product.module.scss";
 import { ProductType } from "@/types/product/product.type";
+import Link from "next/link";
 
 export default function ProductView({ products }: { products: ProductType[] }) {
   return (
@@ -10,7 +11,11 @@ export default function ProductView({ products }: { products: ProductType[] }) {
         {products?.length > 0 ? (
           <>
             {products.map((product: ProductType) => (
-              <div className={styles.product__content__item} key={product.id}>
+              <Link
+                href={`/product/${product.id}`}
+                className={styles.product__content__item}
+                key={product.id}
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -26,7 +31,7 @@ export default function ProductView({ products }: { products: ProductType[] }) {
                     currency: "IDR",
                   })}
                 </p>
-              </div>
+              </Link>
             ))}
           </>
         ) : (
