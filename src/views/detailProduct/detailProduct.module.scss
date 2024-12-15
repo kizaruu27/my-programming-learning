@@ -1,0 +1,31 @@
+.productDetail {
+  width: 25%;
+  padding: 10px;
+  margin: 0 auto;
+  &__image {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 5%;
+  }
+  &__image:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  &__category {
+    color: gray;
+  }
+  &__price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+}
