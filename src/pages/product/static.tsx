@@ -11,6 +11,11 @@ export async function getStaticProps() {
     props: {
       products: res?.data,
     },
+    // Fungsi revalidate adalah untuk melakukan regenerate data dalam sebuah static side generation page
+    // Revalidate akan mengecek apakah data dari API itu sama atau berbeda
+    // Jika berbedda, maka akan dilakukan revalidate setelah 10 detik
+    // Cache yg dilakukan pada saat melakukan build akan dihapus dan akan digantikan dengan yang baru
+    // revalidate: 10,
   };
 }
 
