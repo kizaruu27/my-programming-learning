@@ -11,7 +11,8 @@ export default function ProductPage() {
   const { data, isLoading, error } = useSWR("/api/product", fetchProduct);
 
   useEffect(() => {
-    if (!isLogin) push("/auth/login");
+    // if (!isLogin) push("/auth/login");
+    // push("/");
   }, []);
 
   return (
