@@ -1,5 +1,15 @@
-import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 import app from "./init";
+import bcrypt from "bcrypt";
 
 // Service menampung beberapa function yg akan dipanggil di endpoint
 
@@ -31,4 +41,34 @@ export const retrieveDataById = async (collection: string, id: string) => {
   const data = snapshot.data();
 
   return data;
+};
+
+export const signUp = async (
+  userData: {
+    email: string;
+    username: string;
+    password: string;
+    role: string;
+  },
+  callback: Function
+) => {
+  const q = query(collection(firestore, "users"), where("email", "==", userData.email));
+  const snapshot = await getDocs(q);
+  const data = snapshot.docs.map((data) => ({
+    id: data.id,
+    ...data.data(),
+  }));
+
+  if (data.length > 0) callback({ status: false, messege: "Email is already exist" });
+  else {
+    userData.password = await bcrypt.hash(userData.password, 10);
+    userData.role = "member";
+    await addDoc(collection(firestore, "users"), userData)
+      .then(() => {
+        callback({ status: true, messege: "Register Success" });
+      })
+      .catch((error) => {
+        callback({ status: false, messege: error.message });
+      });
+  }
 };
