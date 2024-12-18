@@ -43,6 +43,18 @@ export const retrieveDataById = async (collection: string, id: string) => {
   return data;
 };
 
+export const signIn = async (userData: { email: string }) => {
+  const q = query(collection(firestore, "users"), where("email", "==", userData.email));
+  const snapshot = await getDocs(q);
+  const data = snapshot.docs.map((data: any) => ({
+    id: data.id,
+    ...data.data(),
+  }));
+
+  if (data) return data[0];
+  else return null;
+};
+
 export const signUp = async (
   userData: {
     email: string;
