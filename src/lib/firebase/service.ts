@@ -6,6 +6,7 @@ import {
   getDocs,
   getFirestore,
   query,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import app from "./init";
@@ -82,5 +83,38 @@ export const signUp = async (
       .catch((error) => {
         callback({ status: false, messege: error.message });
       });
+  }
+};
+
+export const signInWithGoogle = async (userData: any, callback: Function) => {
+  const q = query(collection(firestore, "users"), where("email", "==", userData.email));
+  const snapshot = await getDocs(q);
+  const data: any = snapshot.docs.map((data) => ({
+    id: data.id,
+    ...data.data(),
+  }));
+
+  if (data.length > 0) {
+    userData.role = data[0].role;
+    await updateDoc(doc(firestore, "users", data[0].id), userData)
+      .then(() =>
+        callback({
+          status: true,
+          messege: "Successfully login with Google",
+          data: userData,
+        })
+      )
+      .catch(() => callback({ status: false, messege: "Login failed" }));
+  } else {
+    userData.role = "member";
+    await addDoc(collection(firestore, "users"), userData)
+      .then(() =>
+        callback({
+          status: true,
+          messege: "Successfully login with Google",
+          data: userData,
+        })
+      )
+      .catch(() => callback({ status: false, messege: "Login failed" }));
   }
 };

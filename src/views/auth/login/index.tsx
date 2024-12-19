@@ -3,6 +3,8 @@ import styles from "./login.module.scss";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
+import googleIcon from "../../../../public/google.webp";
 
 export default function LoginViews() {
   const [isLoading, setIsLoading] = useState(false);
@@ -71,10 +73,26 @@ export default function LoginViews() {
             {isLoading ? "Loading..." : "Login"}
           </button>
         </form>
+        <button
+          onClick={() =>
+            signIn("google", {
+              callbackUrl,
+              redirect: false,
+            })
+          }
+          className={styles.login__form__item__google}
+        >
+          <Image
+            src={googleIcon}
+            alt="google-icon"
+            className={styles.login__form__item__google__image}
+          />
+          <p className={styles.login__form__item__google__text}>Sign in with Google</p>
+        </button>
       </div>
       {errorMsg && <p className={styles.login__error}>{errorMsg}</p>}
       <p className={styles.login__link}>
-        Already have an account? Sign in <Link href="/auth/login">here</Link>
+        Dont have an account? sign up <Link href="/auth/register">here</Link>
       </p>
     </div>
   );
