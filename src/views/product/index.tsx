@@ -16,9 +16,11 @@ export default function ProductView({ products }: { products: ProductType[] }) {
                 className={styles.product__content__item}
                 key={product.id}
               >
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  width={500}
+                  height={500}
                   className={styles.product__content__item__image}
                 />
                 <h4 className={styles.product__content__item__name}>{product.name}</h4>
