@@ -1,0 +1,22 @@
+{
+  "/_app": "pages/_app.js",
+  "/about": "pages/about.js",
+  "/api/[[...product]]": "pages/api/[[...product]].js",
+  "/api/revalidate": "pages/api/revalidate.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/testing": "pages/api/testing.js",
+  "/auth/login": "pages/auth/login.js",
+  "/auth/register": "pages/auth/register.js",
+  "/": "pages/index.js",
+  "/404": "pages/404.js",
+  "/product": "pages/product.js",
+  "/setting/app-page": "pages/setting/app-page.js",
+  "/setting/user": "pages/setting/user.js",
+  "/setting/user/password": "pages/setting/user/password.js",
+  "/shop/[[...slug]]": "pages/shop/[[...slug]].js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/product/server": "pages/product/server.js",
+  "/product/static": "pages/product/static.js",
+  "/product/[product]": "pages/product/[product].js"
+}
