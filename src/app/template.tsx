@@ -7,7 +7,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   return (
     <div>
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <h1>Template State: {state}</h1>
         <button
           onClick={() => setState(state + 1)}
@@ -15,7 +15,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         >
           Click
         </button>
-      </div>
+      </div> */}
       {children}
     </div>
   );
